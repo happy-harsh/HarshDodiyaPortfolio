@@ -26,14 +26,7 @@ const data = [
     projectTechStack: "MERN",
   },
   {
-    projectTitle: "ToDo",
-    projectLink: "https://cerulean-gecko-a9fb30.netlify.app/",
-    projectCategory: "WebApp",
-    projectImage: "/assets/images/portfolio-image/happyFood.png",
-    projectTechStack: "MERN",
-  },
-  {
-    projectTitle: "ToDo",
+    projectTitle: "Old Portfolio",
     projectLink:
       "https://65716fb65522774d7435dc16--newportfolio003.netlify.app/",
     projectCategory: "WebApp",
