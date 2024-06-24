@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react';
+// import "../styles/Navbar.css"
 
 const Navbar = ({ setActiveSection }) => {
   const [activeSection, setActiveSectionState] = useState('about');

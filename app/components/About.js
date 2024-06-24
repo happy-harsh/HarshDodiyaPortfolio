@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
+import "../styles/About.css";
 
 const About = () => {
   return (
     <>
-      <div class="about  active" data-page="about">
+      <div class="about  article" data-page="about">
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
@@ -63,21 +65,23 @@ const About = () => {
 
           <ul class="clients-list has-scrollbar">
             <li class="clients-item">
-              <a href="#">
+              <a href="https://www.webeelanguages.com/">
                 <img
                   src="/assets/images/fav.png"
                   alt="client logo"
                   width="40px"
+                  target="_blank"
                 />
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
+              <a href="https://www.cinevenger.in/">
                 <img
                   src="/assets/images/3.png"
                   alt="client logo"
                   width="40px"
+                  target="_blank"
                 />
               </a>
             </li>

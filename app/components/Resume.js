@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import React from "react";
-import { MdCastForEducation, MdSchool, MdWork } from "react-icons/md";
+import { MdSchool, MdWork } from "react-icons/md";
+import "../styles/Resume.css"
 
 const Resume = () => {
   return (
     <>
-      <div class="" data-page="">
+      <div class="resume article " data-page="resume">
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
@@ -13,7 +14,7 @@ const Resume = () => {
           <div class="title-wrapper">
             <div class="icon-box">
               {/* <ion-icon name="book-outline"></ion-icon> */}
-              <MdWork/>
+              <MdWork />
             </div>
 
             <h3 class="h3">Experience</h3>
@@ -25,13 +26,34 @@ const Resume = () => {
 
               <span>2024 — Present</span>
 
-              <p class="timeline-text">
+              {/* <p class="timeline-text">
                 Nemo enim ipsam voluptatem blanditiis praesentium voluptum
                 delenit atque corrupti, quos dolores et qvuas molestias
                 exceptur.
-              </p>
-            </li>
+              </p> */}
 
+              <ul class="timeline-inside-list timeline-text">
+                <li>
+                  Engineered a high-performance stock screener webapp with Flask
+                  and React, capable of displaying live data for 500 stocks and
+                  cutting data refresh time from 10 minutes to 1 minute. This
+                  solution boosted the CEO's monthly profit by 20% and saved
+                  significant monitoring time.
+                </li>
+                <li>
+                  Built and deployed various utility APIs on server using remote
+                  SSH, enhancing backend efficiency and scalability.
+                </li>
+                <li>
+                  Revamped organization website infrastructure with Next.js,
+                  resulting in dramatic improvements to speed and accessibility.
+                </li>
+                <li>
+                  Executed on-page SEO optimization, boosting search engine
+                  rankings and organic traffic.
+                </li>
+              </ul>
+            </li>
           </ol>
         </section>
 
@@ -39,7 +61,7 @@ const Resume = () => {
           <div class="title-wrapper">
             <div class="icon-box">
               {/* <ion-icon name="book-outline"></ion-icon> */}
-              <MdSchool/>
+              <MdSchool />
             </div>
 
             <h3 class="h3">Education</h3>
@@ -48,45 +70,41 @@ const Resume = () => {
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
-               Vidyavardhini College of Engineering & Technology
+                Vidyavardhini College of Engineering & Technology
               </h4>
 
               <span>2019-2023</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                delenit atque corrupti, quos dolores et quas molestias exceptur.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Royal College of Arts, Science & Commerce</h4>
-
-              <span>2019</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda
-                ossimus, omnis voluptas assumenda est omnis..
+                Bachelor's EXTC, 9.34 C.G.P.A
               </p>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
-                Christ High School
+                Royal College of Arts, Science & Commerce
               </h4>
+
+              <span>2019</span>
+
+              <p class="timeline-text">
+                HSC, 82.3%
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Christ High School</h4>
 
               <span>2017</span>
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila
-                voluptas mag odit aut fugit, sed consequuntur magni dolores eos.
+                SSC, 90.40%
               </p>
             </li>
           </ol>
         </section>
 
-
-{/* 
+        {/* 
         <section class="skill">
           <h3 class="h3 skills-title">My skills</h3>
 

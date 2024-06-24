@@ -1,17 +1,59 @@
 "use client";
 import React from "react";
-import "../styles/Portfolio.css"
+import "../styles/Portfolio.css";
+import { BsEye } from "react-icons/bs";
 
-const data = [{
-    projectTitle:"Shopezy",
-    projectLink:"",
-    projectCategory:"WebApp"
-}]
+const data = [
+  {
+    projectTitle: "Shopezy",
+    projectLink: "https://shopezy-mern-frontend.vercel.app/",
+    projectCategory: "WebApp",
+    projectImage: "/assets/images/portfolio-image/Shopezy.png",
+    projectTechStack: "MERN",
+  },
+  {
+    projectTitle: "Tic Tac Toe",
+    projectLink: "https://tictacgame.surge.sh/",
+    projectCategory: "WebApp",
+    projectImage: "/assets/images/portfolio-image/tic.png",
+    projectTechStack: "React js",
+  },
+  {
+    projectTitle: "HappyFood",
+    projectLink: "https://cerulean-gecko-a9fb30.netlify.app/",
+    projectCategory: "WebApp",
+    projectImage: "/assets/images/portfolio-image/happyFood.png",
+    projectTechStack: "MERN",
+  },
+  {
+    projectTitle: "ToDo",
+    projectLink: "https://cerulean-gecko-a9fb30.netlify.app/",
+    projectCategory: "WebApp",
+    projectImage: "/assets/images/portfolio-image/happyFood.png",
+    projectTechStack: "MERN",
+  },
+  {
+    projectTitle: "ToDo",
+    projectLink:
+      "https://65716fb65522774d7435dc16--newportfolio003.netlify.app/",
+    projectCategory: "WebApp",
+    projectImage: "/assets/images/portfolio-image/portfolio.png",
+    projectTechStack: "HTML CSS",
+  },
+  {
+    projectTitle: "Expense Tracker ",
+    projectLink:
+      "https://65716fb65522774d7435dc16--newportfolio003.netlify.app/",
+    projectCategory: "WebApp",
+    projectImage: "https://user-images.githubusercontent.com/70851344/124381802-0801fe00-dce2-11eb-8978-dfea53055368.png",
+    projectTechStack: "Python Tkinter, sqlite3",
+  },
+];
 
 const Portfolio = () => {
   return (
     <>
-      <div class="portfolio" data-page="portfolio">
+      <div class="portfolio article" data-page="portfolio">
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
@@ -36,7 +78,7 @@ const Portfolio = () => {
               <button data-filter-btn>Web development</button>
             </li>
           </ul> */}
-{/* 
+          {/* 
           <div class="filter-select-box">
             <button class="filter-select" data-select>
               <div class="select-value" data-selecct-value>
@@ -68,37 +110,35 @@ const Portfolio = () => {
           </div> */}
 
           <ul class="project-list">
-    {
-        data.map((info)=>{
-            return(
+            {data.map((info) => {
+              return (
                 <li
-                class="project-item  active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img
-                      src="/assets/images/Shopezy.png"
-                      alt="finance"
-                      loading="lazy"
-                    />
-                  </figure>
-  
-                  <h3 class="project-title">{info.projectTitle}</h3>
-  
-                  <p class="project-category">{info.projectCategory}</p>
-                </a>
-              </li>
-            )
-        })
-    }
+                  class="project-item  active"
+                  data-filter-item
+                  data-category="web development"
+                >
+                  <a href={info.projectLink} target="_blank">
+                    <figure class="project-img">
+                      <div class="project-item-icon-box">
+                        {/* <ion-icon name="eye-outline"></ion-icon> */}
+                        <BsEye />
+                      </div>
 
+                      <img
+                        src={info.projectImage}
+                        alt={info.projectTitle}
+                        loading="lazy"
+                      />
+                    </figure>
 
+                    <h3 class="project-title">{info.projectTitle}</h3>
+
+                    {/* <p class="project-category">{info.projectCategory}</p> */}
+                    <p class="project-category">{info.projectTechStack}</p>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </section>
       </div>

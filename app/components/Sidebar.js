@@ -1,114 +1,95 @@
-"use client"
-import React from 'react'
-import { MdContactPhone, MdLocationCity, MdMail, MdPhone } from 'react-icons/md'
+"use client";
+import React, { useState } from "react";
+import { BsArrow90DegDown, BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { MdMail, MdPhone, MdLocationCity } from "react-icons/md";
+// import "../styles/Sidebar.css"
 
 const Sidebar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
-            <aside class="sidebar" data-sidebar>
+      <aside className={`sidebar ${toggle ? "active" : ""}`}>
+        <div className="sidebar-info">
+          <figure className="avatar-box">
+            <img
+            src="/assets/images/avatar-myy.png"
+              alt="Harsh Dodiya"
+            />
+          </figure>
 
-<div class="sidebar-info">
+          <div className="info-content">
+            <h1 className="name" title="Harsh Dodiya">
+              Harsh Dodiya
+            </h1>
 
-  <figure class="avatar-box">
-    <img src="/assets/images/my-avatar.png" alt="Richard hanrick" width="80" />
-  </figure>
+            <p className="title">Tech Guy</p>
+          </div>
 
-  <div class="info-content">
-    <h1 class="name" title="Richard hanrick">Harsh Dodiya</h1>
+          <button className="info_more-btn" onClick={handleToggle}>
+            <BsArrow90DegDown />
+          </button>
+        </div>
 
-    <p class="title">Another Tech Guy</p>
-  </div>
+        <div className="sidebar-info_more">
+          <div className="separator"></div>
 
-  <button class="info_more-btn" data-sidebar-btn>
-    <span>Show Contacts</span>
+          <ul className="contacts-list">
+            <li className="contact-item">
+              <div className="icon-box">
+                <MdMail />
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">Email</p>
+                <a href="mailto:harsh.dodi@gmail.com" className="contact-link">
+                  harsh.dodi@gmail.com
+                </a>
+              </div>
+            </li>
+            <li className="contact-item">
+              <div className="icon-box">
+                <MdPhone />
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">Phone</p>
+                <a href="tel:+917506549896" className="contact-link">
+                  +91 7506549896
+                </a>
+              </div>
+            </li>
+            <li className="contact-item">
+              <div className="icon-box">
+                <MdLocationCity />
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">Location</p>
+                <address>Mumbai, Maharashtra, India</address>
+              </div>
+            </li>
+          </ul>
 
-    <ion-icon name="chevron-down"></ion-icon>
-  </button>
+          <div className="separator"></div>
 
-</div>
-
-<div class="sidebar-info_more">
-
-  <div class="separator"></div>
-
-  <ul class="contacts-list">
-
-    <li class="contact-item">
-
-      <div class="icon-box">
-        {/* <ion-icon name="mail-outline"></ion-icon> */}
-        <MdMail/>
-      </div>
-
-      <div class="contact-info">
-        <p class="contact-title">Email</p>
-
-        <a href="mailto:harsh.dodi@gmail.com" class="contact-link">harsh.dodi@gmail.com</a>
-      </div>
-
-    </li>
-
-    <li class="contact-item">
-
-      <div class="icon-box">
-        {/* <ion-icon name="phone-portrait-outline"></ion-icon> */}
-        <MdPhone/>
-      </div>
-
-      <div class="contact-info">
-        <p class="contact-title">Phone</p>
-
-        <a href="tel:+12133522795" class="contact-link">+91 7506549896</a>
-      </div>
-
-    </li>
-
-    <li class="contact-item">
-
-      <div class="icon-box">
-        {/* <ion-icon name="location-outline"></ion-icon> */}
-        <MdLocationCity/>
-      </div>
-
-      <div class="contact-info">
-        <p class="contact-title">Location</p>
-
-        <address>Mumbai, Maharashtra, India</address>
-      </div>
-
-    </li>
-
-  </ul>
-
-  <div class="separator"></div>
-
-  <ul class="social-list">
-
-    <li class="social-item">
-      <a href="#" class="social-link">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </a>
-    </li>
-
-    <li class="social-item">
-      <a href="#" class="social-link">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </a>
-    </li>
-
-    <li class="social-item">
-      <a href="#" class="social-link">
-        <ion-icon name="logo-instagram"></ion-icon>
-      </a>
-    </li>
-
-  </ul>
-
-</div>
-
-</aside>
+          <ul className="social-list">
+            {/* <li className="social-item">
+              <a href="#" className="social-link">
+                <BsInstagram />
+              </a>
+            </li> */}
+            <li className="social-item">
+              <a href="https://www.linkedin.com/in/harsh-dodiya-76882b196/" className="social-link">
+                <BsLinkedin />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
