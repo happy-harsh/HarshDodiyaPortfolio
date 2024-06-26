@@ -103,12 +103,13 @@ const Portfolio = () => {
           </div> */}
 
           <ul class="project-list">
-            {data.map((info) => {
+            {data.map((info, index) => {
               return (
                 <li
                   class="project-item  active"
                   data-filter-item
                   data-category="web development"
+                  key={index}
                 >
                   <a href={info.projectLink} target="_blank">
                     <figure class="project-img">

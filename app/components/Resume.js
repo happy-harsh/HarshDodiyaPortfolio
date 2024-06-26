@@ -76,7 +76,7 @@ const Resume = () => {
               <span>2019-2023</span>
 
               <p class="timeline-text">
-                Bachelor's EXTC, 9.34 C.G.P.A
+                Bachelor&apos;s EXTC, 9.34 C.G.P.A
               </p>
             </li>
 

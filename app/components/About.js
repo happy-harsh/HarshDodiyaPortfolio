@@ -12,7 +12,7 @@ const About = () => {
 
         <section class="about-text">
           <p>
-            Hey there, I'm Harsh, a passionate and results-driven Full Stack Web
+            Hey there, I&apos;m Harsh, a passionate and results-driven Full Stack Web
             App Developer Who is constantly exploring and implementing new
             technologies to stay at the forefront of the tech landscape.
           </p>
