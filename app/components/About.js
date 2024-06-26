@@ -15,6 +15,7 @@ const About = () => {
             Hey there, I&apos;m Harsh, a passionate and results-driven Full Stack Web
             App Developer Who is constantly exploring and implementing new
             technologies to stay at the forefront of the tech landscape.
+            All day is I work on computer
           </p>
         </section>
 
