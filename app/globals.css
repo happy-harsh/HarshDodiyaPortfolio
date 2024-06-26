@@ -320,7 +320,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 150px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -340,6 +340,8 @@ main {
   border-radius: 20px;
   overflow: hidden;
 }
+
+.avatar-box img { width: 120px; }
 
 
 .info-content .name {
@@ -515,7 +517,7 @@ main {
   .clients-item { min-width: calc(33.33% - 10px); }
 
 
-
+  .avatar-box img { width: 120px; }
   /**
    * #PORTFOLIO, BLOG 
    */
